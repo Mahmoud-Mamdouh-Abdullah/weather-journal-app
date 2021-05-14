@@ -1,10 +1,10 @@
 /* Global Variables */
 const generate = document.getElementById('generate');
 const baseUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = '&APPID=012f4d0b39937e045bce14f0621f077e';
+const apiKey = '&APPID=012f4d0b39937e045bce14f0621f077e&units=imperial';
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth() + 1 +'.'+ d.getDate()+'.'+ d.getFullYear();
 
 generate.addEventListener('click', function(event) {
 
@@ -62,9 +62,9 @@ const updateUI = async (url = '') => {
   try {
     const allData = await req.json();
 
-    document.getElementById('date').innerText = allData.date;
-    document.getElementById('temp').innerText = allData.temp;
-    document.getElementById('content').innerText = `Your feeling: ${allData.feelings}`;
+    document.getElementById('date').innerHTML = allData.date;
+    document.getElementById('temp').innerHTML = `${allData.temp} Fahrenheit`;
+    document.getElementById('content').innerHTML = `Your feeling: ${allData.feelings}`;
   } catch (error) {
     console.log("update UI error", error);
   }
