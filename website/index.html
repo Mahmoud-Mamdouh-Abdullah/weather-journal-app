@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Weather Journal</title>
-<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
- <body>
-<div id = "app">
-  <div class ="holder headline">
-    Weather Journal App
-  </div>
-  <div class ="holder zip">
-    <label for="zip">Enter Zipcode here</label>
-    <input type="text" id="zip" placeholder="enter zip code here">
-  </div>
-  <div class ="holder feel">
-    <label for="feelings">How are you feeling today?</label>
-    <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
-    <button id="generate" type = "submit"> Generate </button>
-  </div>
-  <div class ="holder entry">
-    <div class = "title">Most Recent Entry</div>
-   <div id = "entryHolder">
-    <div id = "date"></div> 
-   <div id = "temp"></div>
-   <div id = "content"></div>
-  </div>
-  </div>
-  </div>
-<script src="app.js" type="text/javascript"></script>
 
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Journal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="css" href="node_modules/bootstrap/scss/_buttons.scss">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="index.html">
+              <h1 class="text-center">Weather Journal App</h1>
+            </a>
+          </div>
+        </div>
+        <!--End navbar-header-->
+      </div>
+      <!--End Container-->
+    </nav>
+  </header>
+
+  <form action="">
+    <div id="main-content" class="container d-flex flex-column align-items-center justify-content-center">
+
+      <h2>Get temprature by zip code</h2>
+      <div class="form-group zip">
+        <label for="zip" class="justify-content-start">Enter Zip Code Here</label>
+        <input id="zip" type="text" class="form-control" placeholder="Zip code" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+
+      <div class="form-group feelings">
+        <label for="feelings">Enter your Feelings Here</label>
+        <textarea id="feelings" type="text" class="form-control" rows="6" placeholder="Enter your Feelings Here"
+          aria-label="Username" aria-describedby="basic-addon1"></textarea>
+      </div>
+
+      <div class="submit-btn">
+        <input type="submit" id="generate" class="btn btn-primary btn-block">
+        <input type="reset" id="reset" class="btn btn-primary btn-block">
+      </div>
+
+      <div id="result" class="d-flex flex-column align-items-center justify-content-center">
+        <div id="most-msg">Most Recen Entry</div>
+        <div class="line"></div>
+        <div class="result-container text-center">
+          <div id="city"></div>
+          <div id="date"></div>
+          <div id="temp"></div>
+          <div id="content"></div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script src="app.js" type="text/javascript"></script>
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

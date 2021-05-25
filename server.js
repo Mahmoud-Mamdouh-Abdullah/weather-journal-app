@@ -33,6 +33,7 @@ app.get('/all', (req, res) => {
 
 //POST
 app.post('/addData', (req, res) => {
+  projectData.location = req.body.location;
   projectData.temp = req.body.temp;
   projectData.date = req.body.date;
   projectData.feelings = req.body.feelings;

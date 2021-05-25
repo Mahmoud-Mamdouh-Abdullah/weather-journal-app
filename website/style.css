@@ -1,115 +1,94 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+body {
+  font-size: 16px;
+  background-color: #282828;
+  margin: 0;
+}
+#header-nav {
+  background-color: rgb(27, 167, 223);
+  border-radius: 0;
+  border: 0;
+}
+.navbar-header {
+	height: auto;
+}
+.navbar-brand {
+  padding-top: 25px;
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+.navbar-brand h1 { /* Company name */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
 }
 
-.holder{
-    width: 100%;
-    height: 100%;
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
 }
 
-.entry{
-    background: rgba(59, 74, 107, .4);
-    width:40%;
-    height:200px;
-	position: relative;
-    top: 200px;
+/*End Header*/
+
+#main-content {
+  margin: 0 auto;
+  width: 100%;
+  flex: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.form-group{
+  width: 70%;
 }
 
-#entryHolder{
+.submit-btn {
+  width: 70%;
+}
+#result {
+  margin-top: 30px;
+  width: 70%;
+}
+.result-container{
+  margin-top: 20px;
+}
+#most-msg{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2em;
+}
+.line{
+  height: 1px;
+  width: 100%;
+  background-color: black;
+}
+#city{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-#date{
-    color: black;
+#date, #content{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
 }
-
 #temp{
-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    font-weight: bold;
 }
+@media (min-width: 576px) {  }
 
-#content{
-color: black;
-}
 
-.headline {
+@media (min-width: 768px) { 
 
-}
-.title{
+ }
 
-}
+@media (min-width: 992px) { 
 
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
-}
+ }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-}
+@media (min-width: 1200px) { 
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
-}
-h1{
-    font-size: 36px;
-}
-
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-}
-/* Reset style for HTML element on active to have no border*/
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
+ }
